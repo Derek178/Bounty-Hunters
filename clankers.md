@@ -21,6 +21,7 @@ Automated tracking of all Clankers PR contributors.
 | tuvmdainam | 2 | 2026-05-13 |
 | iice257 | 2 | 2026-05-13 |
 | davguij | 2 | 2026-05-13 |
+| albayrakburak55 | 2 | 2026-05-13 |
 | SebnemC | 2 | 2026-05-13 |
 | Saumya-Verma123 | 2 | 2026-05-13 |
 | woairenzhi | 1 | 2026-05-13 |
@@ -37,7 +38,6 @@ Automated tracking of all Clankers PR contributors.
 | digzrow-coder | 1 | 2026-05-13 |
 | daveinturkey15-byte | 1 | 2026-05-13 |
 | autochamchikim-pixel | 1 | 2026-05-13 |
-| albayrakburak55 | 1 | 2026-05-13 |
 | SimplyRayYZL | 1 | 2026-05-13 |
 | SimoneMariaRomeo | 1 | 2026-05-13 |
 | SeanNg93 | 1 | 2026-05-13 |
