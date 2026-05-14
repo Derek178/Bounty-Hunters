@@ -17,9 +17,9 @@ Automated tracking of all Clankers PR contributors.
 | Ahmadkhattak1 | 11 | 2026-05-13 |
 | albayrakburak55 | 9 | 2026-05-13 |
 | ChienNguyen23 | 8 | 2026-05-13 |
+| newmattock | 8 | 2026-05-14 |
 | Mburdo | 7 | 2026-05-13 |
 | SimplyRayYZL | 7 | 2026-05-13 |
-| newmattock | 7 | 2026-05-14 |
 | ethever | 6 | 2026-05-13 |
 | TsukinowaRin | 6 | 2026-05-13 |
 | GopalaKrishnaVarshith | 5 | 2026-05-13 |
