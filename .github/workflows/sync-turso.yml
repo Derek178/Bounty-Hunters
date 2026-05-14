@@ -1,0 +1,82 @@
+name: Sync Turso Database
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Sync clankers.json to Turso
+        uses: actions/github-script@v7
+        env:
+          TURSO_URL: https://clankers-leaderboard-stacymoon.aws-us-east-2.turso.io/v2/pipeline
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+        with:
+          script: |
+            const fs = require('fs');
+
+            const rows = JSON.parse(fs.readFileSync('clankers.json', 'utf8'));
+            console.log(`Syncing ${rows.length} rows to Turso`);
+
+            // create table if not exists
+            const createTable = {
+              requests: [
+                {
+                  type: 'execute',
+                  stmt: {
+                    sql: 'CREATE TABLE IF NOT EXISTS clankers (username TEXT PRIMARY KEY, total_prs INTEGER NOT NULL, first_pr TEXT NOT NULL, last_pr TEXT NOT NULL)'
+                  }
+                },
+                { type: 'close' }
+              ]
+            };
+
+            await fetch(process.env.TURSO_URL, {
+              method: 'POST',
+              headers: {
+                'Authorization': `Bearer ${process.env.TURSO_AUTH_TOKEN}`,
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(createTable)
+            });
+
+            // delete all rows then reinsert from JSON (JSON is source of truth)
+            const requests = [
+              { type: 'execute', stmt: { sql: 'DELETE FROM clankers' } }
+            ];
+            rows.forEach(row => requests.push({
+              type: 'execute',
+              stmt: {
+                sql: 'INSERT INTO clankers (username, total_prs, first_pr, last_pr) VALUES (?, ?, ?, ?)',
+                args: [
+                  { type: 'text', value: row.username },
+                  { type: 'integer', value: String(row.total_prs) },
+                  { type: 'text', value: row.first_pr },
+                  { type: 'text', value: row.last_pr }
+                ]
+              }
+            }));
+            requests.push({ type: 'close' });
+
+            const res = await fetch(process.env.TURSO_URL, {
+              method: 'POST',
+              headers: {
+                'Authorization': `Bearer ${process.env.TURSO_AUTH_TOKEN}`,
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ requests })
+            });
+
+            if (res.ok) {
+              console.log(`Synced ${rows.length} rows to Turso`);
+            } else {
+              console.log(`Turso sync failed: ${await res.text()}`);
+              process.exit(1);
+            }
