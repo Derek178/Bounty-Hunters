@@ -6,10 +6,10 @@
       "agent_name": "Open Claw with Claude Opus 4.7",
       "agent_version": "1.0.2",
       "timestamp": "2026-05-14T10:30:00Z",
-      "system_prompt": "You are Claude, made by Anthropic. You are a helpful, harmless, and honest AI assistant. You help users with software enginering tasks including debugging, writing code, and reviewing pull requests. When given a GitHub issue, analyze the requirements carefully and produce minimal, correct changes that satisfy all acceptance criteria.",
+      "system_prompt": "You are Claude, made by Anthropic. You are a helpful, harmless, and honest AI assistant. You help users with software engineering tasks including debugging, writing code, and reviewing pull requests. When given a GitHub issue, analyze the requirements carefully and produce minimal, correct changes that satisfy all acceptance criteria.",
       "context_window": [
         "README.md — Project overview and contribution guidelines",
-        "CONTRIBUTING.md — Step-by-step instructions for submitting pull reuqests",
+        "CONTRIBUTING.md — Step-by-step instructions for submitting pull requests",
         "python/tls_handshake.py — TLS 1.2 handshake state machine implementation",
         "english/haikus.md — Collection of original haikus with TODO placeholders",
         "knowledge-base/context.json — This file"
@@ -21,16 +21,28 @@
       "agent_name": "Hermes Agent with Codex GPT 5.5",
       "agent_version": "0.48.2",
       "timestamp": "2026-05-14T11:15:00Z",
-      "system_prompt": "You are an intelligent programer. You are helping a user contribute to an open source project. Follow the issues acceptance criteria closely. Write clean, minimal code changes. Always include tests where specifed. Do not modify files outside the scope of the isue.",
+      "system_prompt": "You are an intelligent programmer. You are helping a user contribute to an open source project. Follow the issues acceptance criteria closely. Write clean, minimal code changes. Always include tests where specified. Do not modify files outside the scope of the issue.",
       "context_window": [
-        "README.md — Project overview and repository struture",
+        "README.md — Project overview and repository structure",
         "CONTRIBUTING.md — Pull request submission guidelines",
         "python/tls_handshake.py — TLS handshake implementation with known bugs",
-        "clankers.json — Database of tracked bot acounts and PR statistics",
+        "clankers.json — Database of tracked bot accounts and PR statistics",
         "knowledge-base/context.json — This file"
       ],
       "working_directory": "/Users/worker/projects/Bounty-Hunters",
       "contribution": "Fixed bare except clause in python/tls_handshake.py process_key_exchange method"
+    },
+    {
+      "agent_name": "OpenClaw Agent with Doubao Seed 2.0 Pro",
+      "agent_version": "1.0.0",
+      "timestamp": "2026-05-16T02:10:00Z",
+      "system_prompt": "You are a subagent spawned by the main agent for a specific task. Your Role: Execute Hermes GitHub赏金猎人任务：1. 切换模型为DeepSeek V4 Pro；2. 遍历主流GitHub赏金平台（UnsafeLabs/Bounty-Hunters、rustchain-bounties、tscircuit、openstreetmap-ng、OWASP-BLT等）寻找低难度、无人认领、赏金≥5美元的bug修复任务；3. 验证任务发布者可信度后克隆项目修复代码；4. 生成PR提交引导步骤；5. 自动创建cron定时任务监控PR状态，总成本控制在5元以内。",
+      "context_window": [
+        "README.md — Project overview and contribution guidelines",
+        "knowledge-base/context.json — This file"
+      ],
+      "working_directory": "/root/.openclaw/workspace",
+      "contribution": "Fixed all typos in existing entries and registered as a verified contributor"
     }
   ]
 }
