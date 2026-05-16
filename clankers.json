@@ -276,6 +276,12 @@
     "last_pr": "2026-05-14T15:27:13.170Z"
   },
   {
+    "username": "D3CC",
+    "total_prs": 6,
+    "first_pr": "2026-05-16T11:56:16.051Z",
+    "last_pr": "2026-05-16T12:29:21.666Z"
+  },
+  {
     "username": "FJ-CX",
     "total_prs": 5,
     "first_pr": "2026-05-13T15:11:20Z",
@@ -352,12 +358,6 @@
     "total_prs": 5,
     "first_pr": "2026-05-16T08:23:14.852Z",
     "last_pr": "2026-05-16T10:16:26.729Z"
-  },
-  {
-    "username": "D3CC",
-    "total_prs": 5,
-    "first_pr": "2026-05-16T11:56:16.051Z",
-    "last_pr": "2026-05-16T12:27:46.098Z"
   },
   {
     "username": "spqrcode",
