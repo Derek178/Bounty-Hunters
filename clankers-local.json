@@ -810,6 +810,12 @@
     "last_pr": "2026-05-21T08:36:57.758Z"
   },
   {
+    "username": "kennedydqz-del",
+    "total_prs": 2,
+    "first_pr": "2026-05-21T10:40:11.449Z",
+    "last_pr": "2026-05-21T11:45:12.318Z"
+  },
+  {
     "username": "ErenCankutUYSAL",
     "total_prs": 1,
     "first_pr": "2026-05-13T19:25:27Z",
@@ -1174,11 +1180,5 @@
     "total_prs": 1,
     "first_pr": "2026-05-21T10:26:31.897Z",
     "last_pr": "2026-05-21T10:26:31.897Z"
-  },
-  {
-    "username": "kennedydqz-del",
-    "total_prs": 1,
-    "first_pr": "2026-05-21T10:40:11.449Z",
-    "last_pr": "2026-05-21T10:40:11.449Z"
   }
 ]
