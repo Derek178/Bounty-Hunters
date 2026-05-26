@@ -8,49 +8,64 @@ contract CrossChainBridge {
     address public validator;
     uint256 public nonce;
 
+    uint256 private constant ECDSA_S_MALLEABILITY_LIMIT =
+        0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D576E7357A4501DDFE92F46681B20A0;
+
     mapping(bytes32 => bool) public processedTransfers;
 
     event TransferInitiated(address indexed sender, uint256 amount, uint256 targetChain, uint256 nonce);
     event TransferProcessed(bytes32 indexed transferHash, address indexed recipient, uint256 amount);
 
     constructor(address _bridgeToken, address _validator) {
+        require(_bridgeToken != address(0), "Invalid token");
+        require(_validator != address(0), "Invalid validator");
+
         bridgeToken = IERC20(_bridgeToken);
         validator = _validator;
     }
 
     function initiateTransfer(uint256 amount, uint256 targetChain) external {
         require(amount > 0, "Amount must be > 0");
+        require(targetChain != block.chainid, "Invalid target chain");
+
         bridgeToken.transferFrom(msg.sender, address(this), amount);
         emit TransferInitiated(msg.sender, amount, targetChain, nonce++);
     }
 
-    // BUG: No chain ID in hash — cross-chain replay possible
-    // BUG: No nonce per sender — same-chain replay possible
-    // BUG: No contract address in hash — replay after upgrade possible
     function processTransfer(
         address recipient,
         uint256 amount,
         uint256 transferNonce,
         bytes calldata signature
     ) external {
-        bytes32 transferHash = keccak256(abi.encodePacked(
-            recipient,
-            amount,
-            transferNonce
-            // Missing: block.chainid
-            // Missing: address(this)
-        ));
+        require(recipient != address(0), "Invalid recipient");
+        require(amount > 0, "Amount must be > 0");
+
+        bytes32 transferHash = getTransferHash(recipient, amount, transferNonce);
 
         require(!processedTransfers[transferHash], "Already processed");
         require(verifySignature(transferHash, signature), "Invalid signature");
 
         processedTransfers[transferHash] = true;
-        bridgeToken.transfer(recipient, amount);
+        require(bridgeToken.transfer(recipient, amount), "Transfer failed");
 
         emit TransferProcessed(transferHash, recipient, amount);
     }
 
-    // BUG: Does not check for zero-address return from ecrecover
+    function getTransferHash(
+        address recipient,
+        uint256 amount,
+        uint256 transferNonce
+    ) public view returns (bytes32) {
+        return keccak256(abi.encode(
+            block.chainid,
+            address(this),
+            recipient,
+            amount,
+            transferNonce
+        ));
+    }
+
     function verifySignature(bytes32 hash, bytes calldata signature) public view returns (bool) {
         require(signature.length == 65, "Invalid signature length");
 
@@ -66,12 +81,15 @@ contract CrossChainBridge {
 
         if (v < 27) v += 27;
 
+        require(v == 27 || v == 28, "Invalid signature v");
+        require(uint256(s) <= ECDSA_S_MALLEABILITY_LIMIT, "Invalid signature s");
+
         address recovered = ecrecover(
             keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", hash)),
             v, r, s
         );
 
-        // BUG: Missing require(recovered != address(0))
+        require(recovered != address(0), "Invalid signature recovery");
         return recovered == validator;
     }
 
