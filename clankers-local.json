@@ -1044,6 +1044,12 @@
     "last_pr": "2026-05-26T03:07:48.298Z"
   },
   {
+    "username": "NgMKha",
+    "total_prs": 2,
+    "first_pr": "2026-05-26T10:06:55.143Z",
+    "last_pr": "2026-05-27T01:56:32.797Z"
+  },
+  {
     "username": "ErenCankutUYSAL",
     "total_prs": 1,
     "first_pr": "2026-05-13T19:25:27Z",
@@ -1450,11 +1456,5 @@
     "total_prs": 1,
     "first_pr": "2026-05-26T06:20:20.575Z",
     "last_pr": "2026-05-26T06:20:20.575Z"
-  },
-  {
-    "username": "NgMKha",
-    "total_prs": 1,
-    "first_pr": "2026-05-26T10:06:55.143Z",
-    "last_pr": "2026-05-26T10:06:55.143Z"
   }
 ]
