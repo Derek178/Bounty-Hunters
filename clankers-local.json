@@ -1074,6 +1074,12 @@
     "last_pr": "2026-05-27T15:19:04.194Z"
   },
   {
+    "username": "MrDwarf7",
+    "total_prs": 2,
+    "first_pr": "2026-05-27T16:38:59.552Z",
+    "last_pr": "2026-05-27T17:03:55.783Z"
+  },
+  {
     "username": "ErenCankutUYSAL",
     "total_prs": 1,
     "first_pr": "2026-05-13T19:25:27Z",
@@ -1492,11 +1498,5 @@
     "total_prs": 1,
     "first_pr": "2026-05-27T07:59:58.643Z",
     "last_pr": "2026-05-27T07:59:58.643Z"
-  },
-  {
-    "username": "MrDwarf7",
-    "total_prs": 1,
-    "first_pr": "2026-05-27T16:38:59.552Z",
-    "last_pr": "2026-05-27T16:38:59.552Z"
   }
 ]
