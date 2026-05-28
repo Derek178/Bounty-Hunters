@@ -1116,6 +1116,12 @@
     "last_pr": "2026-05-27T20:44:41.974Z"
   },
   {
+    "username": "unsiqasik",
+    "total_prs": 2,
+    "first_pr": "2026-05-28T21:16:17.694Z",
+    "last_pr": "2026-05-28T21:29:44.020Z"
+  },
+  {
     "username": "ErenCankutUYSAL",
     "total_prs": 1,
     "first_pr": "2026-05-13T19:25:27Z",
@@ -1564,11 +1570,5 @@
     "total_prs": 1,
     "first_pr": "2026-05-28T21:08:18.870Z",
     "last_pr": "2026-05-28T21:08:18.870Z"
-  },
-  {
-    "username": "unsiqasik",
-    "total_prs": 1,
-    "first_pr": "2026-05-28T21:16:17.694Z",
-    "last_pr": "2026-05-28T21:16:17.694Z"
   }
 ]
