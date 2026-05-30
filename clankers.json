@@ -162,6 +162,12 @@
     "last_pr": "2026-05-23T11:59:39.364Z"
   },
   {
+    "username": "JirA44",
+    "total_prs": 30,
+    "first_pr": "2026-05-28T11:39:37.698Z",
+    "last_pr": "2026-05-30T06:18:14.216Z"
+  },
+  {
     "username": "sleeppig0314-collab",
     "total_prs": 29,
     "first_pr": "2026-05-15T23:27:20.283Z",
@@ -222,6 +228,12 @@
     "last_pr": "2026-05-13T16:14:26Z"
   },
   {
+    "username": "bryantrinh",
+    "total_prs": 22,
+    "first_pr": "2026-05-29T04:04:49.758Z",
+    "last_pr": "2026-05-30T05:38:51.904Z"
+  },
+  {
     "username": "absalonCRC",
     "total_prs": 21,
     "first_pr": "2026-05-15T07:18:19.262Z",
@@ -256,12 +268,6 @@
     "total_prs": 20,
     "first_pr": "2026-05-16T04:01:59.508Z",
     "last_pr": "2026-05-16T09:45:46.427Z"
-  },
-  {
-    "username": "JirA44",
-    "total_prs": 20,
-    "first_pr": "2026-05-28T11:39:37.698Z",
-    "last_pr": "2026-05-30T02:21:02.839Z"
   },
   {
     "username": "Davidrsdiaz",
@@ -438,6 +444,12 @@
     "last_pr": "2026-05-30T01:55:11.169Z"
   },
   {
+    "username": "ManmohanBuildsProducts",
+    "total_prs": 12,
+    "first_pr": "2026-05-30T05:02:39.115Z",
+    "last_pr": "2026-05-30T06:15:19.666Z"
+  },
+  {
     "username": "er1c-cartman",
     "total_prs": 12,
     "first_pr": "2026-05-20T01:03:05.753Z",
@@ -508,12 +520,6 @@
     "total_prs": 10,
     "first_pr": "2026-05-19T03:34:40.600Z",
     "last_pr": "2026-05-19T15:39:48.445Z"
-  },
-  {
-    "username": "bryantrinh",
-    "total_prs": 10,
-    "first_pr": "2026-05-29T04:04:49.758Z",
-    "last_pr": "2026-05-30T02:26:19.618Z"
   },
   {
     "username": "mvmax-dev",
@@ -916,6 +922,12 @@
     "total_prs": 5,
     "first_pr": "2026-05-21T11:42:57.311Z",
     "last_pr": "2026-05-21T16:04:04.468Z"
+  },
+  {
+    "username": "kejuunuy",
+    "total_prs": 5,
+    "first_pr": "2026-05-29T06:56:07.545Z",
+    "last_pr": "2026-05-30T03:11:13.673Z"
   },
   {
     "username": "spqrcode",
@@ -1360,6 +1372,12 @@
     "total_prs": 2,
     "first_pr": "2026-05-29T00:43:19.709Z",
     "last_pr": "2026-05-29T03:10:16.611Z"
+  },
+  {
+    "username": "sodalone",
+    "total_prs": 2,
+    "first_pr": "2026-05-30T04:40:50.966Z",
+    "last_pr": "2026-05-30T05:58:55.915Z"
   },
   {
     "username": "kingskuan",
@@ -1960,11 +1978,5 @@
     "total_prs": 1,
     "first_pr": "2026-05-28T15:39:10.599Z",
     "last_pr": "2026-05-28T15:39:10.599Z"
-  },
-  {
-    "username": "kejuunuy",
-    "total_prs": 1,
-    "first_pr": "2026-05-29T06:56:07.545Z",
-    "last_pr": "2026-05-29T06:56:07.545Z"
   }
 ]
