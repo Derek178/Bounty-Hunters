@@ -198,6 +198,12 @@
     "last_pr": "2026-05-13T15:45:54Z"
   },
   {
+    "username": "bryantrinh",
+    "total_prs": 26,
+    "first_pr": "2026-05-29T04:04:49.758Z",
+    "last_pr": "2026-05-30T11:07:35.334Z"
+  },
+  {
     "username": "jjb9707",
     "total_prs": 26,
     "first_pr": "2026-05-28T13:18:17.856Z",
@@ -226,12 +232,6 @@
     "total_prs": 22,
     "first_pr": "2026-05-13T06:46:40Z",
     "last_pr": "2026-05-13T16:14:26Z"
-  },
-  {
-    "username": "bryantrinh",
-    "total_prs": 22,
-    "first_pr": "2026-05-29T04:04:49.758Z",
-    "last_pr": "2026-05-30T05:38:51.904Z"
   },
   {
     "username": "absalonCRC",
@@ -330,6 +330,12 @@
     "last_pr": "2026-05-30T06:35:28.997Z"
   },
   {
+    "username": "barnacleagent-svg",
+    "total_prs": 16,
+    "first_pr": "2026-05-30T07:09:25.857Z",
+    "last_pr": "2026-05-30T09:28:07.458Z"
+  },
+  {
     "username": "callmekidz",
     "total_prs": 14,
     "first_pr": "2026-05-13T19:54:10Z",
@@ -358,12 +364,6 @@
     "total_prs": 14,
     "first_pr": "2026-05-26T12:53:57.576Z",
     "last_pr": "2026-05-26T15:14:02.854Z"
-  },
-  {
-    "username": "barnacleagent-svg",
-    "total_prs": 14,
-    "first_pr": "2026-05-30T07:09:25.857Z",
-    "last_pr": "2026-05-30T09:05:59.423Z"
   },
   {
     "username": "liyanzong",
@@ -1386,6 +1386,12 @@
     "last_pr": "2026-05-30T05:58:55.915Z"
   },
   {
+    "username": "cal432689-beep",
+    "total_prs": 2,
+    "first_pr": "2026-05-30T07:34:05.591Z",
+    "last_pr": "2026-05-30T10:22:23.113Z"
+  },
+  {
     "username": "kingskuan",
     "total_prs": 2,
     "first_pr": "2026-05-15T14:10:31.174Z",
@@ -1858,12 +1864,6 @@
     "total_prs": 1,
     "first_pr": "2026-05-29T23:45:48.116Z",
     "last_pr": "2026-05-29T23:45:48.116Z"
-  },
-  {
-    "username": "cal432689-beep",
-    "total_prs": 1,
-    "first_pr": "2026-05-30T07:34:05.591Z",
-    "last_pr": "2026-05-30T07:34:05.591Z"
   },
   {
     "username": "erazort01",
