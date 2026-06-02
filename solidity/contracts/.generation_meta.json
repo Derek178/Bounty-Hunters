@@ -1,0 +1,5 @@
+{
+  "agent": "OpenAI Codex",
+  "initial_directives": "Non-sensitive public summary: OpenAI Codex coding agent. Hidden system/developer instructions, private configuration, and session initialization text are intentionally not disclosed because they are not public bounty material.",
+  "date": "2026-06-02T03:15:00Z"
+}
